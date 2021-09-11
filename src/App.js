@@ -1,41 +1,18 @@
 import './App.css';
 import React, {useState} from 'react';
-
+import getCircuitColour from './getCircuitColour';
 function App() {
-  const [circuit, setCircuit] = useState(1)
+  const [circuit, setCircuit] = useState(0)
   const [colour, setColour] = useState("red")
-  
+  const [display, setDisplay] = useState("")
+
+
   const handleChange = (e) =>{
     const value = e.target.value;
     setCircuit(value)
   }
   
-  const getColour = () => {
-    let colourOutput = ""
-    switch (circuit % 6) {
-      case 0:
-        colourOutput = "blue"
-        break
-      case 1:
-        colourOutput = "red"
-        break
-      case 2:
-        colourOutput = "red"  
-        break
-      case 3:
-        colourOutput = "black"
-        break
-      case 4: 
-        colourOutput = "black"
-        break
-      case 5: 
-        colourOutput = "blue"
-        break
-      default:
-        break
-    }
-    setColour(colourOutput)
-  }
+  
   
   
   
@@ -53,7 +30,7 @@ function App() {
         value={circuit} 
         onChange={handleChange}
        />
-       <button onClick={getColour}>
+       <button onClick={getCircuitColour}>
          Check Colour
        </button>
 
