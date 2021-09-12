@@ -6,13 +6,12 @@ export default function Button(props) {
 
   return(
     <div
-      class="keypadButton"
+      className="keypadButton"
       id={props.id}
-      onClick={props.handleClick}
+      onClick={props.event}
     >
-      <span>
-        {props.label}
-      </span>
+      {props.label}
+      
     </div>
   )
 }

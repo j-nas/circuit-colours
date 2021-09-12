@@ -3,38 +3,31 @@ import "./style/keypad.css"
 import KeypadButton from "./KeypadButton"
 export default function Keypad(props) {
 
-  const handleClick = (e) => {
-    props.keypress(e.target.id)
-  }
-  
-  const buttonLayout = () => {
-    for (let i = 0; i < 9; i++) {
-      <KeypadButton
-        id={i + 1}
-        event={handleClick}
-        label={i + 1}
-        
+
+  // const oneToNine = Array(8).fill(1).map(() => oneToNine[0]++)
+  const oneToNine = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+  const buttonLayout = oneToNine.map((key) => (
+    <KeypadButton
+        id={key}
+        event={props.keypad.enterNumber}
+        label={key}
+        key={key}
       />
-    }
-  }
+  ))
+      
+    
+  
   return(
-    <div class="keypad">
+    <div className="keypad">
       {buttonLayout}
+      
       <KeypadButton
         id="clr"
-        event={handleClick}
+        event={props.keypad.clear}
         label="CLR"
       />
-      <KeypadButton
-        id="0"
-        event={handleClick}
-        label="0"
-      />
-      <KeypadButton
-        id="backspace"
-        event={handleClick}
-        label="<=="
-      />
+      
+      
     </div>
 
     

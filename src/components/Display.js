@@ -4,15 +4,11 @@ export default function Display(props) {
   
   
   return (
-    <div>
-      <span>
-        {props.prefixText}
-      </span>
-      <span
-        color={props.colour}
-      >
-        {props.result}
-      </span>
+    <div 
+      color={props.appData.colour}
+      className="display"
+    >
+      {props.appData.display}
     </div>
   )
 }
