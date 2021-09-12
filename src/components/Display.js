@@ -5,10 +5,11 @@ export default function Display(props) {
   
   return (
     <div 
-      color={props.appData.colour}
+      color="red"
       className="display"
     >
       {props.appData.display}
+      
     </div>
   )
 }
