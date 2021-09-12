@@ -18,10 +18,11 @@ export default function Keypad(props) {
     
   
   return(
-    <div className="keypad">
+    <div className="grid grid-cols-3 grid-rows-4">
       {buttonLayout}
       
       <KeypadButton
+        classProp="col-start-3"
         id="clr"
         event={props.keypad.clear}
         label="CLR"

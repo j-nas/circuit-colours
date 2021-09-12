@@ -6,7 +6,7 @@ export default function Button(props) {
 
   return(
     <div
-      className="keypadButton"
+      className={props.classProp}
       id={props.id}
       onClick={props.event}
     >

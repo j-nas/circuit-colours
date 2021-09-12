@@ -34,7 +34,7 @@ function App() {
   
   
   return (
-    <div className="App">
+    <div className="container mx-auto">
      
      
      <Display appData = {appData}/>

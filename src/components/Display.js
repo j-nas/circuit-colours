@@ -5,8 +5,8 @@ export default function Display(props) {
   
   return (
     <div 
-      color="red"
-      className="display"
+      
+      className="text-red-500"
     >
       {props.appData.display}
       
