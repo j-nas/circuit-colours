@@ -20,7 +20,7 @@ export default function Keypad(props) {
       <KeypadButton
         classProp="col-start-1 col-end-3"
         id="0"
-        envent={props.keypad.enterNumber}
+        event={props.keypad.enterNumber}
         label="0"
       />
 
