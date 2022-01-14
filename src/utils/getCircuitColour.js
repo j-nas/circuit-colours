@@ -1,26 +1,18 @@
 export default function getCircuitColour(circuitNumber) {
-  let colourOutput = ""
   switch (circuitNumber % 6) {
     case 0:
-      colourOutput = "blue"
-      break
+      return "blue"
     case 1:
-      colourOutput = "red"
-      break
+      return "red"
     case 2:
-      colourOutput = "red"  
-      break
+      return "red"  
     case 3:
-      colourOutput = "black"
-      break
+      return "black"
     case 4: 
-      colourOutput = "black"
-      break
+      return "black"
     case 5: 
-      colourOutput = "blue"
-      break
+      return "blue"
     default:
-      break
+      return ""
   }
-  return(colourOutput)
 }
