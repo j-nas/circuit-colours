@@ -1,5 +1,4 @@
 import React from "react";
-import "./style/keypad.css";
 import KeypadButton from "./KeypadButton";
 export default function Keypad(props) {
   const oneToNine = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
