@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import getCircuitColour from './getCircuitColour';
+import getCircuitColour from './utils/getCircuitColour';
 
 import Display from './components/Display'
 import Keypad from './components/Keypad'
@@ -48,7 +48,7 @@ function App() {
       <PhaseDisplay phase={phase}/>
       
     </main>  
-    <footer className="h-10 bg-blue-500">
+    <footer className=" bg-blue-500 absolute bottom-0 left-0 justify-self-center">
       <AdSpace />
     </footer>
      
